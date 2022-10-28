@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+
+  <style>
+    body{
+      background-color: hsl(30, 38%, 92%);
+    }
+    .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 700px;
+      height: 550px;
+      background-color: white;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .product-image{
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    .text{
+      margin-left: 30px;      
+    }
+    .type{
+      color: hsl(228, 12%, 48%);
+      font-family: Montserrat;
+      letter-spacing: 4px;
+      margin-top: 40px;
+    }
+    .name{
+      font-family: Fraunces;
+    }
+    .description{
+      color: hsl(228, 12%, 48%);
+      font-family: Montserrat;
+      line-height: 25px;
+    }
+    .price{
+      color: hsl(158, 36%, 37%);
+      font-family: Fraunces;
+      font-size: 35px;
+      word-spacing: 35px;
+    }
+    .discount{
+      color: hsl(228, 12%, 48%);
+      font-size: 15px;
+      font-family: Montserrat;
+      text-decoration: line-through;
+      vertical-align: 30%;
+    }
+    .add_to_cart{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-right: 80px;
+      padding-left: 80px;
+      border: none;
+      border-radius: 8px;
+      background-color: hsl(158, 36%, 37%);
+      color: white;
+      font-family: Montserrat;
+      font-weight: bold;
+      align-items: center;
+    }
+    .add_to_cart:hover{
+      cursor: pointer;
+      background-color: hsl(158, 38%, 26%);
+      transition: 0.15s;
+    }
+    .add_to_cart:active{
+      background-color: hsl(158, 39%, 17%);
+      box-shadow: 5px 0px 0px hsl(33, 35%, 83%);
+      transition: box-shadow 0s;
+    }
+    .button-wrap{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .icon{
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media only screen and (max-width:700px){
+      .container{
+        grid-template-columns: 1fr;
+        height: 95%;
+        width: 90%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .product-image{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<main class="container">
+<div>
+  <img src="images/image-product-desktop.jpg" alt="Loading image" class="product-image">
+</div>
+<div class="text">
+<p class="type">PERFUME</p>
+
+<h1 class="name">Gabrielle<br> Essence Eau<br> De Parfum</h1>
+<p class="description">A floral, solar and voluptuous interpretation composed by<br> Olivier Polge, 
+  Perfumer-Creator<br> for the House of CHANEL.</p> 
+
+<p class="price">$149.99
+  <span class="discount">$169.99</span></p>  
+<p class="button-wrap">
+<button class="add_to_cart"><img src="images/icon-cart.svg" alt="&#128722" class="icon"> Add to Cart</button>
+</p>
+</div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Zamaull">Zamaull</a>.
+  </footer>
+</main>
+</body>
+</html>
